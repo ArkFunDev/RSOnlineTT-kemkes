@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-16"?>
 <Task version="1.2" xmlns="http://schemas.microsoft.com/windows/2004/02/mit/task">
   <RegistrationInfo>
-    <Date>2026-05-11T08:37:27.7578091</Date>
-    <Author>DESKTOP-H7UFNU6\USER</Author>
-    <Description>kirim TT</Description>
-    <URI>\RSOnline</URI>
+    <Date>2026-05-11T00:00:00</Date>
+    <Author>ArkFunDev</Author>
+    <Description>Kirim data tempat tidur RS ke RS Online Kemenkes setiap 1 menit, berjalan meski user logout.</Description>
   </RegistrationInfo>
   <Triggers>
     <CalendarTrigger>
@@ -22,9 +21,8 @@
   </Triggers>
   <Principals>
     <Principal id="Author">
+      <UserId>SYSTEM</UserId>
       <RunLevel>HighestAvailable</RunLevel>
-      <UserId>USER</UserId>
-      <LogonType>Password</LogonType>
     </Principal>
   </Principals>
   <Settings>
@@ -43,12 +41,13 @@
     <Hidden>false</Hidden>
     <RunOnlyIfIdle>false</RunOnlyIfIdle>
     <WakeToRun>false</WakeToRun>
-    <ExecutionTimeLimit>PT0S</ExecutionTimeLimit>
+    <ExecutionTimeLimit>PT2M</ExecutionTimeLimit>
     <Priority>7</Priority>
   </Settings>
   <Actions Context="Author">
     <Exec>
       <Command>C:\rsonline\kirim_kamar.bat</Command>
+      <WorkingDirectory>C:\rsonline</WorkingDirectory>
     </Exec>
   </Actions>
 </Task>
