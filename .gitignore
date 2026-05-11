@@ -1,0 +1,13 @@
+# Konfigurasi sensitif - JANGAN di-commit
+config.php
+
+# Log harian
+log/*.txt
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
