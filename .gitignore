@@ -1,13 +1,17 @@
-# Konfigurasi sensitif - JANGAN di-commit
-config.php
+# Secrets & konfigurasi lokal
+.env
+config/filter.php
+config/mapping_manual.php
 
-# Log harian
-log/*.txt
+# Data & log runtime (berisi data operasional RS)
+data/*
+!data/.gitkeep
+log/*
+!log/.gitkeep
 
-# OS files
+# Editor / OS
+.idea/
+.vscode/
 .DS_Store
 Thumbs.db
-
-# Editor
-.vscode/
-.idea/
+*.swp
