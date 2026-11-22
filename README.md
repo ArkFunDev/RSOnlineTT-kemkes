@@ -1,5 +1,12 @@
 # RSOnlineTT-kemkes
 
+[![CI](https://github.com/ArkFunDev/RSOnlineTT-kemkes/actions/workflows/ci.yml/badge.svg)](https://github.com/ArkFunDev/RSOnlineTT-kemkes/actions/workflows/ci.yml)
+[![PHP](https://img.shields.io/badge/PHP-7.4%2B-777BB4)](https://www.php.net/)
+[![PHP lint](https://github.com/ArkFunDev/RSOnlineTT-kemkes/actions/workflows/lint.yml/badge.svg)](https://github.com/ArkFunDev/RSOnlineTT-kemkes/actions/workflows/lint.yml)
+[![Unit tests](https://github.com/ArkFunDev/RSOnlineTT-kemkes/actions/workflows/tests.yml/badge.svg)](https://github.com/ArkFunDev/RSOnlineTT-kemkes/actions/workflows/tests.yml)
+[![License: MIT](https://img.shields.io/badge/code-MIT-blue)](LICENSE)
+[![Status](https://img.shields.io/badge/status-working%20prototype-orange)](#known-limitations)
+
 Automated bed-availability bridge between a hospital information system (**SIMRS Khanza**) and the Indonesian Ministry of Health's **RS Online / SIRS** platform (the data behind SIRANAP).
 
 > 🇮🇩 *Ringkasan:* sinkronisasi otomatis ketersediaan tempat tidur dari database SIMRS Khanza ke RS Online Kemenkes. Hanya angka agregat (kapasitas & terpakai per ruang) yang dibaca dan dikirim, tanpa data identitas pasien. Panduan lengkap dalam bahasa Indonesia ada di bagian [Panduan Singkat](#panduan-singkat-bahasa-indonesia).
