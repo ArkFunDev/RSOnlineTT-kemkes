@@ -1,13 +1,13 @@
-# RSOnlineTT-kemkes
+﻿# RSOnlineTT-kemkes
 
 [![CI](https://github.com/ArkFunDev/RSOnlineTT-kemkes/actions/workflows/ci.yml/badge.svg)](https://github.com/ArkFunDev/RSOnlineTT-kemkes/actions/workflows/ci.yml)
 [![PHP](https://img.shields.io/badge/PHP-7.4%2B-777BB4)](https://www.php.net/)
 [![License: MIT](https://img.shields.io/badge/code-MIT-blue)](LICENSE)
-[![Status](https://img.shields.io/badge/status-working%20prototype-orange)](#known-limitations)
+[![Status](https://img.shields.io/badge/status-stable-brightgreen)](#known-limitations)
 
 Automated bed-availability bridge between a hospital information system (**SIMRS Khanza**) and the Indonesian Ministry of Health's **RS Online / SIRS** platform (the data behind SIRANAP).
 
-> 🇮🇩 *Ringkasan:* sinkronisasi otomatis ketersediaan tempat tidur dari database SIMRS Khanza ke RS Online Kemenkes. Hanya angka agregat (kapasitas & terpakai per ruang) yang dibaca dan dikirim, tanpa data identitas pasien. Panduan lengkap dalam bahasa Indonesia ada di bagian [Panduan Singkat](#panduan-singkat-bahasa-indonesia).
+> ðŸ‡®ðŸ‡© *Ringkasan:* sinkronisasi otomatis ketersediaan tempat tidur dari database SIMRS Khanza ke RS Online Kemenkes. Hanya angka agregat (kapasitas & terpakai per ruang) yang dibaca dan dikirim, tanpa data identitas pasien. Panduan lengkap dalam bahasa Indonesia ada di bagian [Panduan Singkat](#panduan-singkat-bahasa-indonesia).
 
 *Unofficial project. Not affiliated with or endorsed by the Indonesian Ministry of Health or the Khanza developers.*
 
@@ -19,7 +19,7 @@ Hospitals in Indonesia must report bed availability to the national platform. Do
 
 ```mermaid
 flowchart LR
-    A[(SIMRS Khanza<br/>kamar · kamar_inap · bangsal)] -->|read-only, COUNT only| B[kirimdatakamar.php]
+    A[(SIMRS Khanza<br/>kamar Â· kamar_inap Â· bangsal)] -->|read-only, COUNT only| B[kirimdatakamar.php]
     C[RS Online API<br/>GET master data] --> D[getdatakamar.php] --> E[data/fasyankes.json]
     E --> F[import_rsonlineTT.php<br/>map rooms, dry-run first] --> G[(rsonlineTT)]
     G --> B
@@ -94,17 +94,17 @@ Adjust the path inside `scripts/AutoBridgeRSOnline.xml` (and `PHP_BIN` in `scrip
 ## Project layout
 
 ```
-├── kirimdatakamar.php        # main sync: aggregate → validate → send (CLI + web)
-├── getdatakamar.php          # download master data from RS Online
-├── import_rsonlineTT.php     # map Kemenkes rooms to local rooms (dry-run by default)
-├── index.php                 # manual single-record sender (testing/corrections)
-├── config.php                # reads .env into constants
-├── config/                   # filter & mapping templates
-├── src/                      # bootstrap, helpers, API client
-├── tools/                    # read-only diagnostics
-├── scripts/                  # Windows Task Scheduler + launcher
-├── docs/schema.sql           # rsonlineTT table
-└── tests/run.php             # dependency-free unit tests
+â”œâ”€â”€ kirimdatakamar.php        # main sync: aggregate â†’ validate â†’ send (CLI + web)
+â”œâ”€â”€ getdatakamar.php          # download master data from RS Online
+â”œâ”€â”€ import_rsonlineTT.php     # map Kemenkes rooms to local rooms (dry-run by default)
+â”œâ”€â”€ index.php                 # manual single-record sender (testing/corrections)
+â”œâ”€â”€ config.php                # reads .env into constants
+â”œâ”€â”€ config/                   # filter & mapping templates
+â”œâ”€â”€ src/                      # bootstrap, helpers, API client
+â”œâ”€â”€ tools/                    # read-only diagnostics
+â”œâ”€â”€ scripts/                  # Windows Task Scheduler + launcher
+â”œâ”€â”€ docs/schema.sql           # rsonlineTT table
+â””â”€â”€ tests/run.php             # dependency-free unit tests
 ```
 
 ## Testing
@@ -124,10 +124,10 @@ CI (GitHub Actions) lints every PHP file and runs the tests on PHP 7.4, 8.1 and 
 
 ## Panduan Singkat (Bahasa Indonesia)
 
-1. Salin `.env.example` → `.env`, isi kredensial RS Online dan database.
-2. Salin `config/filter.example.php` → `config/filter.php` dan `config/mapping_manual.example.php` → `config/mapping_manual.php`, sesuaikan dengan SK tempat tidur RS Anda.
+1. Salin `.env.example` â†’ `.env`, isi kredensial RS Online dan database.
+2. Salin `config/filter.example.php` â†’ `config/filter.php` dan `config/mapping_manual.example.php` â†’ `config/mapping_manual.php`, sesuaikan dengan SK tempat tidur RS Anda.
 3. Jalankan `docs/schema.sql` untuk membuat tabel `rsonlineTT`.
-4. Urutan: `getdatakamar.php` → `import_rsonlineTT.php` (cek dry-run, lalu `apply`) → `kirimdatakamar.php debug` → `kirimdatakamar.php send`.
+4. Urutan: `getdatakamar.php` â†’ `import_rsonlineTT.php` (cek dry-run, lalu `apply`) â†’ `kirimdatakamar.php debug` â†’ `kirimdatakamar.php send`.
 5. Jadwalkan otomatis tiap jam dengan Task Scheduler (`scripts/AutoBridgeRSOnline.xml`).
 
 **Penting:** jangan pernah meng-commit `.env`, `config/filter.php`, `config/mapping_manual.php`, folder `data/` dan `log/`. Semuanya sudah ada di `.gitignore`.
@@ -135,3 +135,4 @@ CI (GitHub Actions) lints every PHP file and runs the tests on PHP 7.4, 8.1 and 
 ## License
 
 [MIT](LICENSE)
+
