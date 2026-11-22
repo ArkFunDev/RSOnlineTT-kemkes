@@ -2,8 +2,6 @@
 
 [![CI](https://github.com/ArkFunDev/RSOnlineTT-kemkes/actions/workflows/ci.yml/badge.svg)](https://github.com/ArkFunDev/RSOnlineTT-kemkes/actions/workflows/ci.yml)
 [![PHP](https://img.shields.io/badge/PHP-7.4%2B-777BB4)](https://www.php.net/)
-[![PHP lint](https://github.com/ArkFunDev/RSOnlineTT-kemkes/actions/workflows/lint.yml/badge.svg)](https://github.com/ArkFunDev/RSOnlineTT-kemkes/actions/workflows/lint.yml)
-[![Unit tests](https://github.com/ArkFunDev/RSOnlineTT-kemkes/actions/workflows/tests.yml/badge.svg)](https://github.com/ArkFunDev/RSOnlineTT-kemkes/actions/workflows/tests.yml)
 [![License: MIT](https://img.shields.io/badge/code-MIT-blue)](LICENSE)
 [![Status](https://img.shields.io/badge/status-working%20prototype-orange)](#known-limitations)
 
