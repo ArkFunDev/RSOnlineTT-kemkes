@@ -7,7 +7,7 @@
 
 Automated bed-availability bridge between a hospital information system (**SIMRS Khanza**) and the Indonesian Ministry of Health's **RS Online / SIRS** platform (the data behind SIRANAP).
 
-> ðŸ‡®ðŸ‡© *Ringkasan:* sinkronisasi otomatis ketersediaan tempat tidur dari database SIMRS Khanza ke RS Online Kemenkes. Hanya angka agregat (kapasitas & terpakai per ruang) yang dibaca dan dikirim, tanpa data identitas pasien. Panduan lengkap dalam bahasa Indonesia ada di bagian [Panduan Singkat](#panduan-singkat-bahasa-indonesia).
+> *Ringkasan:* sinkronisasi otomatis ketersediaan tempat tidur dari database SIMRS Khanza ke RS Online Kemenkes. Hanya angka agregat (kapasitas & terpakai per ruang) yang dibaca dan dikirim, tanpa data identitas pasien. Panduan lengkap dalam bahasa Indonesia ada di bagian [Panduan Singkat](#panduan-singkat-bahasa-indonesia).
 
 *Unofficial project. Not affiliated with or endorsed by the Indonesian Ministry of Health or the Khanza developers.*
 
